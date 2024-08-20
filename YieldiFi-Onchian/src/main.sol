@@ -198,7 +198,13 @@ import "./util/AggregatorV3Interface.sol";
             int256 AssetPrice=getAssetPrice(StakingAsset);
 
             uint bal=ytt.balanceOf(user);
-            uint maxlimit= (bal*yr*7)/100000;
+            uint maxlimit= (bal*yr)/10000;
+            if(maxlimit>=userLoan.amount){
+                return false;
+            }
+            else{
+                return true;
+            }
            }
         }
     }
