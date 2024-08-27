@@ -1,0 +1,17 @@
+[profile.default]
+src = "src"
+out = "out"
+libs = ["lib"]
+revert-on-compile-error = false
+solc-args = ["--optimize", "--overwrite", "--warnings-disable"]
+verbosity = 0  
+
+# See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options
+
+remappings = [
+    "@openzeppelin-contracts/=./lib/openzeppelin-contracts/contracts/",
+    "@aave=./lib/aave-v3-core/contracts",
+    '@uniswap/v3-periphery/=lib/v3-periphery/',
+    '@uniswap/v3-core/=lib/v3-core/',
+]
+
